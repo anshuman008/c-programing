@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+    
+    int num1;
+    int num2;
+    
+cout<<"enter the value of a: ";
+cin>>num1;
+
+cout<<"enter the value of b: ";
+cin>>num2;
+
+cout<<"sum of a and b is "<<num1+num2;
+
+    
+    return 0;
+}
