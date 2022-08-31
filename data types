@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+   int a = 4;
+   int b = 6;
+   float pi = 3.14;
+   bool k = true;
+   
+   cout << "the value of a is "<<a<<".\nthe value of b is "<< b;
+   cout <<"\nthe value of pi is "<<pi;
+   
+   cout <<"\nthe vaalue of k is: "<<k;
+
+    return 0;
+}
