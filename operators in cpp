@@ -1,0 +1,47 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+    
+    int a = 10;
+    int b = 5;
+    
+    cout<<"these are the following operators in c++"<<endl;
+     cout<<endl;
+     
+    cout<<"the value of a+b is = "<<a+b<<endl;
+    cout<<"the value of a-b is = "<<a-b<<endl;
+    cout<<"the value of a*b is = "<<a*b<<endl;
+    cout<<"the value of a/b is = "<<a/b<<endl;
+     cout<<"the value of a%b is = "<<a%b<<endl;
+    cout<<"the value of a++ is = "<<a++<<endl;
+    cout<<"the value of a is "<<a<<endl;
+    cout<<"the value of ++a is = "<<++a<<endl;
+    cout<<"the value of a-- is = "<<a--<<endl;
+      cout<<"the value of a is "<<a<<endl;
+    cout<<"the value of --a is = "<<--a<<endl;
+    
+    cout<<endl;
+       
+    
+    cout<<"these are the following comparision operators in c++"<<endl;
+     cout<<endl;
+     
+    cout<<"the value of a == b "<<(a==b)<<endl;
+    cout<<"the value of a != b "<<(a!=b)<<endl;
+    cout<<"the value of a >= b "<<(a>=b)<<endl;
+    cout<<"the value of a <= b "<<(a<=b)<<endl;
+    cout<<"the value of a > b "<<(a>b)<<endl;
+    cout<<"the value of a < b "<<(a<b)<<endl;
+    
+     cout<<endl;
+     
+     cout<<"logical operators in c++"<<endl;
+      cout<<endl;
+     
+     cout<<"the value of AND operator ((a==b)  && (a>=b)) "<<((a==b)&&(a>=b))<<endl;
+     cout<<"the value of OR operator ((a==b)  || (a>=b)) "<<((a==b)||(a>=b))<<endl;  
+    cout<<"the value of NOT operator (!(a==b)) "<<(!(a==b))<<endl; 
+     
+    return 0;
+}
