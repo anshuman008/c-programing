@@ -1,0 +1,56 @@
+
+#include <iostream>
+using namespace std;
+
+ int c = 45; //global variable
+int main() {
+    
+// // *************Build in Data types****************
+//     int a,b,c;
+//     cout << "enter the value of a"<<endl;
+//     cin>>a;
+    
+//       cout << "enter the value of b"<<endl;
+//       cin>>b;
+//       c= a+b;
+//       cout << " the value of local variable c is "<<c<<endl;
+//       cout << " the value of global variavle c is "<<::c<<endl;
+   
+       // ************* Float, double and long double Literals****************
+       
+    //   float d = 45.6F;
+    //   long int e = 55L;
+       
+    //   cout<<" the size of float is "<<sizeof(45.6)<<endl;
+    //   cout<<" the size of float is "<<sizeof(45.6f)<<endl;
+    //     cout<<" the size of float is "<<sizeof(45.6F)<<endl;
+    //     cout<<" the size of float is "<<sizeof(55)<<endl;
+    //   cout<<" the size of float is "<<sizeof(55l)<<endl;
+    //   cout<<" the size of float is "<<sizeof(55L)<<endl;
+       
+    
+    // *************Reference Variables**************** 
+    // Rohan Das----> Monty -----> Rohu ------> Dangerous Coder
+    // float x = 455;
+    // float & y = x;
+    // cout<<x<<endl;
+    // cout<<y<<endl;
+    
+      // *************Typecasting**************** 
+    int a = 45;   
+    float b = 45.46;
+    cout<<"the value of a is "<<(float)a<<endl;
+    cout<<"the value of a is "<<float(a)<<endl;
+    
+    cout<<"the value of b is "<<int(a)<<endl;
+    cout<<"the value of b is "<<(int)a<<endl;
+    int c = int(b);
+
+   cout<<"the value of a + b is "<<a+b<<endl;
+  cout<<"the value of a + b is "<<a+(int)b<<endl;
+   cout<<"the value of a + b is "<<float(a)+b<<endl;
+   
+   
+ 
+    return 0;
+}
