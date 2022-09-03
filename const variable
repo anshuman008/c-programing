@@ -1,0 +1,34 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include<iomanip>
+using namespace std;
+int main() {
+    
+    
+    // contsant variable
+//   const int a = 50;
+ 
+   
+//   cout<<"the value of a is now "<<a<<endl;
+// a=40; this will show an error because a is constant we cant change the value of it
+//   cout<<"the value of a is now "<<a<<endl;
+    
+    //manipulators in c++
+    // int a = 10,b = 20, c = 1235;
+    
+    // cout<<"the value of a without setw is "<<a<<endl;
+    //  cout<<"the value of b without setw  is "<<b<<endl;
+    //   cout<<"the value of c without setw is "<<c<<endl;
+      
+    //     cout<<"the value of s with setw is "<<setw(4)<<a<<endl;
+    //  cout<<"the value of b with setw is "<<setw(4)<<b<<endl;
+    //   cout<<"the value of c with setw is "<<setw(4)<<c<<endl;
+      
+      // operator presedence
+    int a = 32,b = 12;
+
+int c = ((((a*5)+b)-32)+88);
+
+    cout<<"the value of c is "<<c<<endl;
+    return 0;
+}
