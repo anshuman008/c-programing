@@ -1,0 +1,77 @@
+#include<iostream>
+using namespace std;
+int main(){
+
+    int a,b;
+    int c;
+    
+    
+    
+    cout<<"select an opration you want to perform"<<endl;
+    
+      cout<<"1 = addtion"<<endl<<"2 = substraction"<<endl<<"3 = multiplication"<<endl<<"4 = dividion"<<endl;
+    cin>>c;
+
+   
+    
+    if(c==1){
+        cout<<"so you want to do addition please give us two number!!"<<endl;
+        cout<<endl;
+        cout<<"enter the first number"<<endl;
+        cin>>a;
+        cout<<"enter the second number"<<endl;
+        cin>>b;
+    }
+    else if(c==2){
+        cout<<"so you want to do subtraction please give us two number!!"<<endl;
+         cout<<endl;
+        cout<<"enter the first number"<<endl;
+        cin>>a;
+        cout<<"enter the second number"<<endl;
+        cin>>b;
+    }
+    else if(c==3){
+        cout<<"so you want to do multipllication please give us two number!!"<<endl;
+         cout<<endl;
+        cout<<"enter the first number"<<endl;
+        cin>>a;
+        cout<<"enter the second number"<<endl;
+        cin>>b;
+    }
+    else if(c==4){
+        cout<<"so you want to do division please give us two number!!"<<endl;
+         cout<<endl;
+        cout<<"enter the first number"<<endl;
+        cin>>a;
+        cout<<"enter the second number"<<endl;
+        cin>>b;
+    }
+    
+    switch (c)
+    {
+        case 1:
+        cout<<"the substraction : "<<a+b<<endl;
+        break;
+        
+        case 2:
+        cout<<"the value of a - b is: "<<a-b<<endl;
+        break;
+         
+        case 3:
+        cout<<"the value of a * b is: "<<a*b<<endl;
+        break;
+         
+        case 4:
+        cout<<"the value of a / b is: "<<a/b<<endl;
+        break;
+        
+        default:
+        cout<<"oopss something is wrong!!"<<endl;
+        break;
+    }
+    
+    
+    
+    
+    return 0;
+}
