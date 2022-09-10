@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+
+char ch;
+
+  cout<<"enter any input"<<endl;
+  cin>>ch;
+
+if(ch >= 65  &&  ch <= 90){
+
+  cout<<""<<ch<<" is a uppercase charector"<<endl;
+}
+else if(ch >= 97 && ch <= 122 ){
+    
+    cout<<""<<ch<<" is a lowercase charector"<<endl;
+}
+
+else if(ch >= 49 && ch <= 57 ){
+    
+    cout<<""<<ch<<" is a digit"<<endl;
+}
+else{
+    cout<<"you enterd any special charecter!!";
+}
+  
+  return 0;
+}
