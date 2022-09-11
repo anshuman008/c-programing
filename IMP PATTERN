@@ -1,0 +1,42 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+int main() {
+
+int n;
+cin>>n;
+
+int raw = 1;
+
+ while(raw <= n){
+     
+     // print space
+     int space = n - raw ;
+     while(space) {
+         cout<<" ";
+         space = space-1;
+     }
+     
+     // [printing first triangle]
+     int col = 1;
+     while(col<=raw) {
+         
+         cout<<col;
+         col++;
+     }
+     
+     // printing third triangle
+     
+     int start = raw-1;
+     while(start){
+         cout<<start;
+         start--;
+     }
+     cout<<endl;
+     raw++;
+ }
+
+
+    return 0;
+}
