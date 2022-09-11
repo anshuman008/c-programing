@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+    
+    int n;
+    cin>>n;
+    
+    int raw = 1;
+    while(raw <= n){
+        int space = n-raw;
+        while(space){
+            cout<<" ";
+            space--;
+        }
+        
+        int col= 1;
+        while(col<=raw){
+            
+            cout<<raw;
+            col++;
+        }
+        cout<<endl;
+        raw++;
+        
+    }
+    
+    return 0;
+}
