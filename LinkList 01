@@ -1,0 +1,65 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+struct node{
+    int data;
+    node* next;
+};
+void InsertAtHead(node**head_ref,int NewData){
+    node* temp = new node();
+    temp -> data = NewData;
+    temp -> next = *head_ref;
+    *head_ref = temp;
+}
+void PrintLinkList(node*head){
+    node*ptr = head;
+    while(ptr != NULL){
+        cout<<ptr -> data<<endl;
+        ptr = ptr->next;
+    }
+}
+void InsertAtmid(node*head_prev,int NewData){
+    node* temp = new node();
+    temp -> data = NewData;
+    temp -> next = head_prev->next;
+    head_prev->next = temp;
+}
+
+void Append(node**head_ref,int NewData){
+    node*temp = new node();
+    temp -> data = NewData;
+    temp -> next = NULL;
+    
+    node* last = *head_ref;
+    
+    if(last == NULL){
+        *head_ref = temp;
+        return;
+    }
+    while(last -> next  != NULL){
+        last = last->next;
+    }
+    last -> next = temp;
+    return;
+}
+int main() {
+   node* head = NULL;
+  InsertAtHead(&head,87);
+      InsertAtHead(&head,67);
+         InsertAtHead(&head,27);
+            InsertAtHead(&head,57);
+   
+  InsertAtmid(head->next->next,7);
+int n;
+cin>>n;
+
+int value;
+for(int i = 0; i<n ; i++){
+    cin>>value;
+    Append(&head,value);
+}
+   
+PrintLinkList(head);
+    return 0;
+}
