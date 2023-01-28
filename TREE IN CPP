@@ -1,0 +1,200 @@
+// Online C++ compiler to run C++ program online
+#include <bits/stdc++.h>
+using namespace std;
+
+class node{
+    
+    public:
+    int data;
+    node* left;
+    node* right;
+    
+    node(int d){
+        this -> data = d;
+        this -> left = NULL;
+        this -> right = NULL;
+    }
+};
+
+
+node* createTree(node* root){
+int data;
+cout<<"enter the root data"<<endl;
+cin>>data;
+root = new node(data);
+
+if(data == -1){
+    return NULL;
+}
+
+cout<<"enter the left data of node "<<data<<endl;
+ root->left = createTree(root->left);
+
+cout<<"enter the right data of node "<<data<<endl;
+ root->right = createTree(root->right);
+
+return root;
+}
+
+// level order triversal
+void LevelOrderTriversal(node* root){
+    queue<node*> q;
+    q.push(root);
+    q.push(NULL);
+    
+    while(!q.empty()){
+       node* temp = q.front();
+       q.pop();
+       if(temp == NULL){
+           cout<<endl;
+           if(!q.empty()){
+               q.push(NULL);
+           }
+       }
+       else{
+           cout<<temp->data<<" ";
+           if(temp->left){
+               q.push(temp->left);
+           }
+           if(temp->right){
+               q.push(temp->right);
+           }
+       }
+    }
+}
+void createTreeLevelOrder(node* &root){
+    queue<node*> q;
+    int data;
+    cout<<"enter the root data"<<endl;
+    cin>>data;
+    root = new node(data);
+    q.push(root);
+    
+    while(!q.empty()){
+        node* temp = q.front();
+        q.pop();
+        
+        cout<<"enter the left value of node "<<temp->data<<endl;
+        int leftdata;
+        cin>>leftdata;
+        
+        if(leftdata != -1){
+            temp->left = new node(leftdata);
+            q.push(temp->left);
+        }
+        
+        cout<<"enter the right value of node "<<temp->data<<endl;
+        int rightdata;
+        cin>>rightdata;
+        
+        if(rightdata != -1){
+            temp->right = new node(rightdata);
+            q.push(temp->right);
+        }
+    }
+}
+
+// inorder triversal using stack
+
+void inorder(node* root){
+    stack<node*> st;
+    node* node = root;
+    
+    while(true){
+        if(node!=NULL){
+            st.push(node);
+            node = node->left;
+        }
+        else{
+            if(st.empty()) break;
+            
+           node = st.top();
+           st.pop();
+             cout<<node->data<<" ";
+            node = node->right;
+        }
+    }
+}
+
+void preOrder(node* root){
+    stack<node*> st;
+    st.push(root);
+    
+    while(!st.empty()){
+        node* temp = st.top();
+        st.pop();
+        cout<<temp->data<<" ";
+        if(temp->left){
+            st.push(temp->left);
+        }
+        if(temp->right){
+            st.push(temp->right);
+        }
+    }
+}
+
+void postOrder(node* root){
+    stack<node*> st1,st2;
+    st1.push(root);
+    
+    while(!st1.empty()){
+        node*temp = st1.top();
+        st1.pop();
+        st2.push(temp);
+        
+        if(temp->left){
+            st1.push(temp->left);
+        }
+        if(temp->right){
+            st1.push(temp->right);
+        }
+    }
+    
+    while(!st2.empty()){
+        cout<<st2.top()->data<<" ";
+        st2.pop();
+    }
+}
+
+void InorderPreorderPostorder(node* root){
+    vector<int> in;
+    vector<int> pre;
+    vector<int> post;
+    stack<pair<node*,int>> st;
+    st.push({root,1});
+    
+    while(!st.empty()){
+        
+        // inorder case
+        auto it = st.top();
+        st.pop();
+        if(it.second == 1){
+            in.push_back(it.first->data);
+            it.second++;
+            st.push(it);
+        }
+        else if(it.second == 2){
+            pre.push_back(it.first->data);
+            it.second++;
+            st.push(it);
+        }
+        else{
+            post.push_back(it.second);
+        }
+    }
+}
+int main() {
+  node* root = NULL;
+//   root = createTree(root);
+// 1 3 5 7 11 17 -1 -1 -1 -1 -1 -1 -1
+ createTreeLevelOrder(root);
+   LevelOrderTriversal(root);
+   
+   cout<<"inorder triversal"<<endl;
+   inorder(root);
+   cout<<" \n preorder triversal"<<endl;
+   preOrder(root);
+   cout<<"\n postorder triversal"<<endl;
+   postOrder(root);
+    return 0;
+}
